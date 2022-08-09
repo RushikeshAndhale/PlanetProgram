@@ -16,7 +16,8 @@ public static void main(String[] args) {
    /* Steps :
       1) Merge all Arrays as a single array.
       2) By using Iteration we can find count of each gas
-      3) 
+      */
+      
             
     
     
