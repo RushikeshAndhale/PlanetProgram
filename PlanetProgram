@@ -1,0 +1,68 @@
+package Rushi;
+
+import java.util.*;
+     public class Planets
+       {
+	private String name;
+	private String[] gases;
+	private int moon;
+	private boolean rings;
+
+	public Planets(String name, String[] gases, int moon, boolean rings)
+	{
+		this.name = name;
+		this.gases = gases;
+		this.moon = moon;
+		this.rings = rings;
+	}
+
+	public final int getCountOfMoons()
+	{
+		int count = 0;
+		if (this.rings)
+		{
+			count = count + this.moon;
+		}
+		return count;
+	}
+
+
+
+	public static void main(String[] args)
+	{
+		String[] mercurygas = {};
+		String[] venusgas = {"carbon Dioxide", "Nitrogen"};
+		String[] earthgas = {"Nitrogen", "Oxygen"};
+		String[] jupitorgas = {"Hydrogen", "Helium"};
+                String[] saturngas = {"Hydrogen", "Helium"};
+		String[] uranusgas = {"Hydrogen", "Helium", "Methane"};
+
+		Planets m = new Planets("mercury", mg, 0, false);
+		Planets v = new Planets("venus", vg, 0, false);
+		Planets e = new Planets("Earth", eg, 1, false);
+		Planets j = new Planets("Jupitor", jg, 79, true);
+		Planets s = new Planets("Saturn", jg, 83, true);
+		Planets u = new Planets("urenus", ug, 27, true);
+
+		ArrayList<Planets> p = new ArrayList<Planets>();
+		p.add(m);
+		p.add(v);
+		p.add(e);
+		p.add(j);
+		p.add(s);
+		p.add(u);
+		int count = 0;
+		int total = 0;
+		for (Planets planet : p)
+		{
+
+			count = planet.getCountOfMoons();
+			total = count + total;
+
+		}
+		System.out.println("count of moon is:" + total);
+		new Scanner(System.in).nextLine();
+
+	}
+}
+
