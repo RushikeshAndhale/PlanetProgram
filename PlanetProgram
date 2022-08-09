@@ -1,14 +1,14 @@
 package Rushi;
 
 import java.util.*;
-     public class Planets
+     public class PlanetProgram
        {
 	private String name;
 	private String[] gases;
 	private int moon;
 	private boolean rings;
 
-	public Planets(String name, String[] gases, int moon, boolean rings)
+	public PlanetProgram(String name, String[] gases, int moon, boolean rings)
 	{
 		this.name = name;
 		this.gases = gases;
@@ -16,7 +16,7 @@ import java.util.*;
 		this.rings = rings;
 	}
 
-	public final int getCountOfMoons()
+	public final int CountMoons()
 	{
 		int count = 0;
 		if (this.rings)
@@ -37,14 +37,14 @@ import java.util.*;
                 String[] saturngas = {"Hydrogen", "Helium"};
 		String[] uranusgas = {"Hydrogen", "Helium", "Methane"};
 
-		Planets m = new Planets("mercury", mg, 0, false);
-		Planets v = new Planets("venus", vg, 0, false);
-		Planets e = new Planets("Earth", eg, 1, false);
-		Planets j = new Planets("Jupitor", jg, 79, true);
-		Planets s = new Planets("Saturn", jg, 83, true);
-		Planets u = new Planets("urenus", ug, 27, true);
+		PlanetProgram m = new PlanetProgram("mercury", mercurygas, 0, false);
+		PlanetProgram v = new PlanetProgram("venus", venusgas, 0, false);
+		PlanetProgram e = new PlanetProgram("Earth", earthgas, 1, false);
+		PlanetProgram j = new PlanetProgram("Jupitor", jupitorgas, 79, true);
+		PlanetProgram s = new PlanetProgram("Saturn", saturngas, 83, true);
+		PlanetProgram u = new PlanetProgram("urenus", uranusgas, 27, true);
 
-		ArrayList<Planets> p = new ArrayList<Planets>();
+		ArrayList<PlanetProgram> p = new ArrayList<PlanetProgram>();
 		p.add(m);
 		p.add(v);
 		p.add(e);
@@ -53,15 +53,15 @@ import java.util.*;
 		p.add(u);
 		int count = 0;
 		int total = 0;
-		for (Planets planet : p)
+		for (PlanetProgram planet : p)
 		{
 
-			count = planet.getCountOfMoons();
+			count = planet.CountMoons();
 			total = count + total;
 
 		}
-		System.out.println("count of moon is:" + total);
-		new Scanner(System.in).nextLine();
+		System.out.println("total no. of moons :" + total);
+		
 
 	}
 }
