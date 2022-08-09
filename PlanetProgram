@@ -3,10 +3,10 @@ package Rushi;
 import java.util.*;
      public class PlanetProgram
        {
-	private String name;
-	private String[] gases;
-	private int moon;
-	private boolean rings;
+	 String name;
+	 String[] gases;
+	 int moon;
+	 boolean rings;
 
 	public PlanetProgram(String name, String[] gases, int moon, boolean rings)
 	{
